@@ -3,19 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Toggle Sidebar with Back Button</title>
+    <style>
+        .sidebar {
+            /* Add styles for your sidebar here (e.g., width, background color) */
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);  /* Hide sidebar initially */
+        }
+        .sidebar.show {
+            transform: translateX(0); /* Show sidebar on click */
+        }
+        button{
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>The best movie according to Lyhua</h1>
-    <h2>My top 3 movie of all time.</h2>
-    <hr>
-    <h3>Whispered of the heart</h3>
-    <p>slice of life and kinda romantic as a teenage life.</p>
-    <h3>the wolf of wall street</h3>
-    <p>give the kinda grinding bussiness vibe</p>
-    <h3>Kongfu panda 2</h3>
-    <p>a animation that have a very dark story of po (the panda) came from and how to forgive</p>
-    <script src="index.js">
+    <div id="sidebar" class="sidebar">
+        <h1>This is the sidebar</h1>
+        <p>Click me to hide.</p>
+    </div>
+    <button id="toggleSidebar">Toggle Sidebar</button>
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const toggleButton = document.getElementById("toggleSidebar");
+
+        // Track sidebar state (open/closed)
+        let isSidebarOpen = false;
+
+        // Toggle sidebar functionality (same as before)
+        toggleButton.addEventListener("click", function() {
+            sidebar.classList.toggle("show");
+            isSidebarOpen = !isSidebarOpen;
+        });
+
+        // Handle popstate event (back button navigation)
+        window.addEventListener("popstate", function() {
+            if (isSidebarOpen) {
+                sidebar.classList.remove("show");
+                isSidebarOpen = false;
+            }
+        });
     </script>
 </body>
 </html>
