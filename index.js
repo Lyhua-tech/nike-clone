@@ -1,14 +1,10 @@
-const prev = document.getElementById('prev-btn')
-const next = document.getElementById('next-btn')
-const list = document.getElementById('item-list')
+let currentSlide = 0; 
 
-const itemWidth = 150
-const padding = 10
+function plusSlides(n) {
+  const carousel = document.querySelector('.flex.overflow-x-auto');
+  const images = carousel.querySelectorAll('.mySlides');
+  const imageWidth = images[0].clientWidth; 
 
-prev.addEventListener('click',()=>{
-  list.scrollLeft -= itemWidth + padding
-})
-
-next.addEventListener('click',()=>{
-  list.scrollLeft += itemWidth + padding
-})
+  currentSlide = Math.max(0, Math.min(currentSlide + n, images.length - 1)); 
+  carousel.scrollTo({ left: currentSlide * imageWidth, behavior: 'smooth' });
+}
