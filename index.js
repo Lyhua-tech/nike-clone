@@ -13,11 +13,18 @@ function hoverShow(){
   let whiteblock = document.getElementById('white-block')
   let footersec = document.getElementById('footer-sec')
   whiteblock.classList.add('hidden')
-  footersec.classList.add('top-[183px]')
+  footersec.classList.add('top-[296px]')
 }
 function hoverhide(){
   let whiteblock = document.getElementById('white-block')
   let footersec = document.getElementById('footer-sec')
   whiteblock.classList.remove('hidden')
-  footersec.classList.remove('top-[183px]')
+  footersec.classList.remove('top-[296px]')
+}
+
+function hoverDrop(){
+  document.querySelector('#baminton').classList.toggle('hidden')
+}
+function hoverHide(){
+  document.querySelector('#baminton').classList.toggle('hidden')
 }
