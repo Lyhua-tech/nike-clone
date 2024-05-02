@@ -22,9 +22,44 @@ function hoverhide(){
   footersec.classList.remove('top-[296px]')
 }
 
-function hoverDrop(){
-  document.querySelector('#baminton').classList.toggle('hidden')
+function hoverDrop(x){
+  if (x === 1){
+    document.querySelector('#new-feature').classList.toggle('hidden');
+  }
+  if (x === 2){
+    document.querySelector('#men').classList.toggle('hidden');
+  }
+  if (x === 3){
+    document.querySelector('#women').classList.toggle('hidden');
+  }
+  if (x === 4){
+    document.querySelector('#kids').classList.toggle('hidden');
+  }
+  if (x === 5){
+    document.querySelector('#sales').classList.toggle('hidden');
+  }
+  if (x === 6){
+    document.querySelector('#jordan').classList.toggle('hidden');
+  }
 }
-function hoverHide(){
-  document.querySelector('#baminton').classList.toggle('hidden')
+function hoverHide(x){
+  if (x === -1){
+    document.querySelector('#new-feature').classList.toggle('hidden');
+  }
+  if (x === -2){
+    document.querySelector('#men').classList.toggle('hidden');
+  }
+  if (x === -3){
+    document.querySelector('#women').classList.toggle('hidden');
+  }
+  if (x === -4){
+    document.querySelector('#kids').classList.toggle('hidden');
+  }
+  if (x === -5){
+    document.querySelector('#sales').classList.toggle('hidden');
+  }
+  if (x === -6){
+    document.querySelector('#jordan').classList.toggle('hidden');
+  }
 }
+
