@@ -1,7 +1,7 @@
 let currentSlide = 0; 
 
 function plusSlides(n) {
-  const carousel = document.querySelector('.flex.overflow-x-auto');
+  const carousel = document.querySelector('.flex.overflow-x-hidden');
   const images = carousel.querySelectorAll('.mySlides');
   const imageWidth = images[0].clientWidth; 
 
@@ -18,8 +18,10 @@ function hoverShow(){
 function hoverhide(){
   let whiteblock = document.getElementById('white-block')
   let footersec = document.getElementById('footer-sec')
+  let upperfooter= document.getElementById('upperfooter')
   whiteblock.classList.remove('hidden')
   footersec.classList.remove('top-[296px]')
+  
 }
 
 function hoverDrop(x){

@@ -3,83 +3,990 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Featured</title>
 </head>
 <body>
-  <!-- <div class="flex flex-col gap-5 items-center justify-center relative ">
-    <img src="./icons/Screenshot 2024-03-29 at 6.38.27 PM.png" alt="" class="w-full">
-    <section class="flex flex-col justify-center items-center pt-12 gap-3 absolute top-5 text-white">
-      <p class="font-sans text-[18px] font-medium">Feel the Unreal</p>
-      <h2 class="font-sans font-extrabold text-[80px] ">AIR MAX DN</h2>
-      <a href="" target="_blank">The next generation of Air technology is here</a>
-      <button class="rounded-[16px] bg-black text-white py-1.5 px-4">Shop</button>
-    </section>
-  </div> -->
-
-  <div class="group h-[90px] py-5 " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverHide()">
-    <a href="#"  class="group-hover:text-blue-500 relative">BADMINTON</a>
-    <!-- Badminton section -->
-    <section class="w-full  bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0" id="baminton">
-        <div id="HoverBox" class="max-w-[95%] mx-auto flex">
-            <ul class="max-w-[1600px] mx-auto flex mb-4 justify-center flex-col">
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-            </ul>
-            <ul class="max-w-[1600px] mx-auto flex mb-4 justify-center flex-col">
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-            </ul>
-            <ul class="max-w-[1600px] mx-auto flex mb-4 justify-center flex-col">
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-            </ul>
-            <ul class="max-w-[1600px] mx-auto flex mb-4 justify-center flex-col">
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-              <li>HEllo</li>
-            </ul>
+    <!-- <div class="backdrop-blur-md w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div> -->
+    <nav class="bg-[#f5f5f5] py-2 ">
+        <div class="justify-between max-w-[1600px] mx-auto items-center md:flex gap-10 hidden">
+          <div class="flex size-full items-center gap-3 pl-3">
+            <a href=""><img src="../assets/icons/Air-Jordan-Logo.png" alt="" class="w-6 h-[17px]"></a>
+            <a href=""><img src="../assets/icons/converse-logo.svg" alt="" class="w-8 h-[26px]"></a>
+          </div>
+          <ul class="flex justify-between basis-[300px] text-[12px] items-center pr-3 font-sans font-medium">
+            <li><a href="">Find a store</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">Join Us</a></li>
+            <li><a href="">Sign in</a></li>
+          </ul>
         </div>
-    </section>
-</div>
-<script>
-  function hoverDrop(){
-    document.querySelector('#baminton').classList.toggle('hidden')
-}
-function hoverHide(){
-    document.querySelector('#baminton').classList.toggle('hidden')
-}
-</script>
+    </nav>
+    <!-- lower navbar -->
+    <nav class="h-[80px] md:top-10 bg-white w-full ">
+        <div
+          class="justify-between max-w-[1600px] mx-auto items-center flex-1 flex relative"
+        >
+          <a href=""
+            ><img src="../assets/icons/nike-4-logo.svg" alt="" class="size-[80px]"
+          /></a>
+          <ul class="lg:flex gap-10 hidden">
+            <li>
+              <div
+                class="group h-[80px] pt-7 hidden lg:block"
+                id="hoverLink"
+                onmouseenter="hoverDrop(1)"
+                onmouseleave="hoverHide(-1)"
+              >
+                <a href="#" class="group-hover:opacity-50 relative"
+                  >New & Featured</a
+                >
+                <section
+                  class="w-full bg-white absolute top-[80px] z-[10000] left-0 hidden"
+                  id="new-feature"
+                >
+                  <div id="HoverBox" class="max-w-[1200px] mx-auto flex text-sm font-sans font-medium text-[#757575]">
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Mother's Day Shop</li>
+                      <li>Extra 25% Off Select Styles</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">New & Featured</li>
+                      <li>New Arrivals</li>
+                      <li>Best Sellers</li>
+                      <li>New & Upcoming Drops</li>
+                      <li>Add to Bag to See Price</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Trending</li>
+                      <li>Lifestyle Running</li>
+                      <li>The Color Shop</li>
+                      <li>Shop Sport</li>
+                      <li>Jordan Family Days</li>
+                      <li>ACG</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Shop Classics</li>
+                      <li>Dunk</li>
+                      <li>Air Jordan 1</li>
+                      <li>Air Force</li>
+                      <li>Air Max</li>
+                      <li>Blazer</li>
+                      <li>Vomero</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Explore</li>
+                      <li>SNKRS Launch Calendar</li>
+                      <li>Running Shoe Finder</li>
+                      <li>Bra Finder</li>
+                      <li>Product Care</li>
+                      <li>Member Rewards</li>
+                      <li>Member Rewards</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li>
+              <div
+                class="group h-[80px] pt-7"
+                id="hoverLink"
+                onmouseenter="hoverDrop(2)"
+                onmouseleave="hoverHide(-2)"
+              >
+                <a href="#" class="group-hover:opacity-50 relative">Men</a>
+                <!-- Badminton section -->
+                <section
+                  class="w-full bg-white p-[40px] absolute top-[80px] z-[10000] left-0 hidden"
+                  id="men"
+                >
+                  <div id="HoverBox" class="max-w-[1200px] mx-auto flex">
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                    <li class="text-[18px] pb-2 text-black">Mother's Day Shop</li>
+                    <li class="text-sm font-sans font-medium text-[#757575]">Extra 25% Off Select Styles</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">New & Featured</li>
+                      <li>New Arrivals</li>
+                      <li>Best Sellers</li>
+                      <li>Add to Bag to See Price</li>
+                      <li>All Sale</li>
+                      <li>ACG Essentials</li>
+                      <li>Time for Tennis</li>
+                      <li>Jordan Family Days</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Shoes</li>
+                      <li>All Shoes</li>
+                      <li>Lifestyle</li>
+                      <li>Jordan</li>
+                      <li>Dunk</li>
+                      <li>Lifestyle Running</li>
+                      <li>Air Max</li>
+                      <li>Air Force 1</li>
+                      <li>Training & Gym</li>
+                      <li>Basketball</li>
+                      <li>Running</li>
+                      <li>Nike SB</li>
+                      <li>Sandals & Slides</li>
+                      <li>Nike by You</li>
+                      <li>Shoes $100 & Under</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Clothing</li>
+                      <li>All Clothing</li>
+                      <li>Hoodies & Sweatshirts</li>
+                      <li>Pants & Tights</li>
+                      <li>Jackets & Vests</li>
+                      <li>Tops & T-Shirts</li>
+                      <li>Shorts</li>
+                      <li>Matching Sets</li>
+                      <li>Big & Tall</li>
+                      <li>Jordan</li>
+                      <li>Accessories</li>
+                      <li>All Accessories</li>
+                      <li>Bags & Backpacks</li>
+                      <li>Hats & Headwear</li>
+                      <li>Socks</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Shop by Sport</li>
+                      <li>Basketball</li>
+                      <li>Running</li>
+                      <li>Golf</li>
+                      <li>Soccer</li>
+                      <li>Baseball</li>
+                      <li>Football</li>
+                      <li>Softball</li>
+                      <li>Tennis</li>
+                      <li>Dance</li>
+                      <li>Swimming</li>
+                      <li>Skateboarding</li>
+                      <li>Fan Gear</li>
+                      <li>Accessories</li>
+                      <li>All Accessories</li>
+                      <li>Bags & Backpacks</li>
+                      <li>Hats & Headwear</li>
+                      <li>Socks</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li>
+              <div
+                class="group h-[80px] pt-7"
+                id="hoverLink"
+                onmouseenter="hoverDrop(3)"
+                onmouseleave="hoverHide(-3)"
+              >
+                <a href="#" class="group-hover:opacity-50 relative">Women</a>
+                <!-- Badminton section -->
+                <section
+                  class="w-full bg-white p-[40px] absolute top-[80px] z-[10000] left-0 hidden"
+                  id="women"
+                >
+                  <div id="HoverBox" class="max-w-[1200px] mx-auto flex">
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Mother's Day Shop</li>
+                      <li>Extra 25% Off Select Styles</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">New & Featured</li>
+                      <li>New Arrivals</li>
+                      <li>Best Sellers</li>
+                      <li>Add to Bag to See Price</li>
+                      <li>All Sale</li>
+                      <li>Collections</li>
+                      <li>The Color Shop</li>
+                      <li>Zenvy Collection</li>
+                      <li>Loungewear</li>
+                      <li>Jordan Family Days</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Shoes</li>
+                      <li>All Shoes</li>
+                      <li>Lifestyle</li>
+                      <li>Jordan</li>
+                      <li>Dunk</li>
+                      <li>Lifestyle Running</li>
+                      <li>Air Max</li>
+                      <li>Air Force 1</li>
+                      <li>Training & Gym</li>
+                      <li>Basketball</li>
+                      <li>Running</li>
+                      <li>Nike SB</li>
+                      <li>Sandals & Slides</li>
+                      <li>Nike by You</li>
+                      <li>Shoes $100 & Under</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Clothing</li>
+                      <li>All Clothing</li>
+                      <li>Hoodies & Sweatshirts</li>
+                      <li>Pants</li>
+                      <li>Leggings</li>
+                      <li>Jackets & Vests</li>
+                      <li>Tops & T-Shirts</li>
+                      <li>Shorts</li>
+                      <li>Skirts & Dresses</li>
+                      <li>Bras</li>
+                      <li>Matching Sets</li>
+                      <li>Plus Size</li>
+                      <li>Jordan</li>
+                      <li>Accessories</li>
+                      <li>All Accessories</li>
+                      <li>Bags & Backpacks</li>
+                      <li>Hats & Headwear</li>
+                      <li>Socks</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Shop by Sport</li>
+                      <li>Basketball</li>
+                      <li>Running</li>
+                      <li>Golf</li>
+                      <li>Soccer</li>
+                      <li>Baseball</li>
+                      <li>Football</li>
+                      <li>Softball</li>
+                      <li>Tennis</li>
+                      <li>Dance</li>
+                      <li>Swimming</li>
+                      <li>Skateboarding</li>
+                      <li>Fan Gear</li>
+                      <li>Accessories</li>
+                      <li>All Accessories</li>
+                      <li>Bags & Backpacks</li>
+                      <li>Hats & Headwear</li>
+                      <li>Socks</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li>
+              <div
+                class="group h-[80px] pt-7"
+                id="hoverLink"
+                onmouseenter="hoverDrop(4)"
+                onmouseleave="hoverHide(-4)"
+              >
+                <a href="#" class="group-hover:opacity-50 relative">Kids</a>
+                <!-- Badminton section -->
+                <section
+                  class="w-full bg-white p-[40px] absolute top-[80px] z-[10000] left-0 hidden"
+                  id="kids"
+                >
+                  <div id="HoverBox" class="max-w-[1200px] mx-auto flex">
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Mother's Day Shop</li>
+                      <li>Extra 25% Off Select Styles</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">New & Featured</li>
+                      <li>New Arrivals</li>
+                      <li>Best Sellers</li>
+                      <li>Add to Bag to See Price</li>
+                      <li>All Sale</li>
+                      <li>Collections</li>
+                      <li>EasyOn</li>
+                      <li>Teen Essentials</li>
+                      <li>New in Basketball</li>
+                      <li>Skate X Lifestyle</li>
+                      <li>Jordan Family Days</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Shoes by Size</li>
+                      <li>Big Kids (1Y - 7Y)</li>
+                      <li>Little Kids (8C - 3Y)</li>
+                      <li>Baby & Toddler (1C - 10C)</li>
+                      <li>All Shoes</li>
+                      <li>Lifestyle</li>
+                      <li>Jordan</li>
+                      <li>Dunk</li>
+                      <li>Air Max</li>
+                      <li>Air Force 1</li>
+                      <li>Basketball</li>
+                      <li>Running</li>
+                      <li>Sandals & Slides</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Clothing By Size</li>
+                      <li>Big Kids (XS - XL)</li>
+                      <li>Little Kids (4 - 7)</li>
+                      <li>Baby & Toddler (0M - 4T)</li>
+                      <li>Extended Sizing</li>
+                      <li>All Clothing</li>
+                      <li>Hoodies & Sweatshirts</li>
+                      <li>Pants & Tights</li>
+                      <li>Jackets & Vests</li>
+                      <li>Tops & T-Shirts</li>
+                      <li>Shorts</li>
+                      <li>Skirts & Dresses</li>
+                      <li>Bras</li>
+                      <li>Matching Sets</li>
+                      <li>Jordan</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Shop by Sport</li>
+                      <li>Basketball</li>
+                      <li>Running</li>
+                      <li>Golf</li>
+                      <li>Soccer</li>
+                      <li>Baseball</li>
+                      <li>Football</li>
+                      <li>Softball</li>
+                      <li>Tennis</li>
+                      <li>Dance</li>
+                      <li>Swimming</li>
+                      <li>Skateboarding</li>
+                      <li>Fan Gear</li>
+                      <li>Accessories</li>
+                      <li>All Accessories</li>
+                      <li>Bags & Backpacks</li>
+                      <li>Hats & Headwear</li>
+                      <li>Socks</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li>
+              <div
+                class="group h-[80px] pt-7"
+                id="hoverLink"
+                onmouseenter="hoverDrop(5)"
+                onmouseleave="hoverHide(-5)"
+              >
+                <a href="#" class="group-hover:opacity-50 relative">Sale</a>
+                <!-- Badminton section -->
+                <section
+                  class="w-full bg-white p-[40px] absolute top-[80px] z-[10000] left-0 hidden"
+                  id="sales"
+                >
+                  <div id="HoverBox" class="max-w-[1200px] mx-auto flex">
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Mother's Day Shop</li>
+                      <li>Extra 25% off Select Styles</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">All Sale</li>
+                      <li>Sale Shoes</li>
+                      <li>Sale Clothing</li>
+                      <li>Sale Accessories</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Men</li>
+                      <li>Shoes</li>
+                      <li>Clothing</li>
+                      <li>Accessories</li>
+                      <li>Shop All</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Women</li>
+                      <li>Shoes</li>
+                      <li>Clothing</li>
+                      <li>Accessories</li>
+                      <li>Shop All</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Kids</li>
+                      <li>Shoes</li>
+                      <li>Clothing</li>
+                      <li>Accessories</li>
+                      <li>Shop All</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li>
+              <div
+                class="group h-[80px] pt-7"
+                id="hoverLink"
+                onmouseenter="hoverDrop(6)"
+                onmouseleave="hoverHide(-6)"
+              >
+                <a href="#" class="group-hover:opacity-50 relative">Jordan</a>
+                <section
+                  class="w-full bg-white p-[40px] absolute top-[80px] z-[10000] left-0 hidden"
+                  id="jordan"
+                >
+                  <div id="HoverBox" class="max-w-[1200px] mx-auto flex">
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Jordan Family Days</li>
+                      <li>Shop the Collections</li>
+                      <li>Accessories</li>
+                      <li>Shop All</li>
+                      <li>Bags & Backpacks</li>
+                      <li>Hats & Headwear</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">New & Featured</li>
+                      <li>New Arrivals</li>
+                      <li>Best Seller</li>
+                      <li>Collections</li>
+                      <li>Heat Check</li>
+                      <li>Trending Colors</li>
+                      <li>Golf Essentials</li>
+                      <li>Girls Lemonade Stand</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Men</li>
+                      <li>Shop All</li>
+                      <li>Shoes</li>
+                      <li>AJ1</li>
+                      <li>Clothing</li>
+                      <li>Basketball</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Women</li>
+                      <li>Shop All</li>
+                      <li>Shoes</li>
+                      <li>AJ1</li>
+                      <li>Clothing</li>
+                      <li>Basketball</li>
+                    </ul>
+                    <ul
+                      class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col text-sm font-sans font-medium text-[#757575]"
+                    >
+                      <li class="text-[18px] pb-2 text-black">Kids</li>
+                      <li>Shop All</li>
+                      <li>Shoes</li>
+                      <li>AJ1</li>
+                      <li>Clothing</li>
+                      <li>Basketball</li>
+                      <li>Big Kids</li>
+                      <li>Little Kids</li>
+                      <li>Baby & Toddler</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </li>
+          </ul>
+          <div
+            class="justify-center gap-4 flex-1 items-center max-w-[300px] hidden md:flex"
+          >
+            <form action="" class="relative">
+              <i
+                class="fa-solid fa-magnifying-glass absolute left-4 top-[11px]"
+              ></i>
+              <input
+                type="text"
+                placeholder="Search"
+                class="bg-[#f5f5f5] text-[#cccccc] text-sm pl-10 rounded-[20px] py-2"
+              />
+            </form>
+            <a href=""
+              ><img src="../assets/icons/love.png" alt="" class="size-[20px]"
+            /></a>
+            <a href=""
+              ><img src="../assets/icons/shopping-bag.png" alt="" class="size-[20px]"
+            /></a>
+          </div>
+          <!-- Sidebar -->
+          <div class="flex flex-1 gap-2 md:hidden justify-end items-center mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>          
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>          
+            <div class="block cursor-pointer md:hidden pb-1 " onclick="openNav()">
+              <div class="bg-black w-6 h-[3px] rounded-md mt-1"></div>
+              <div class="bg-black w-6 h-[3px] rounded-md mt-1"></div>
+              <div class="bg-black w-6 h-[3px] rounded-md mt-1"></div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- start sidebar -->
+    <div
+      id="mySidenav"
+      class="bg-white absolute z-[100] w-0 h-screen right-0 top-0 duration-500 overflow-hidden"
+    >
+      <div class="mt-10 ml-4">
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-[30px]"
+        onclick="closeNav()"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+      </div>
+      <ul class="mt-10 ml-4 flex-col gap-[24px] flex">
+        <li class="border-b">
+          <div class="flex justify-between">
+            <a
+              href="#"
+              class="py-2 px-4 block text-[#1f2427] transition duration-300 tracking-[1px] text-[22px]"
+              >New & Featured</a
+            >
+            <button
+              onclick="showDropdown(1)"
+              onclick="hideDropDown(-1)"
+              class=""
+            >
+              <img
+                src="../assets/icons/dropdown.png"
+                alt="dropdown"
+                class="size-6 mr-3"
+              />
+            </button>
+          </div>
+          <ul
+            class="pl-10 mt-4 h-0 duration-500 overflow-hidden"
+            id="newfeature"
+          >
+            <li class="pb-2"><a href="">New & Featured</a></li>
+            <li class="pb-2"><a href="">New Arrivals</a></li>
+            <li class="pb-2"><a href="">Mother's Day Shop </a></li>
+            <li class="pb-2"><a href="">Featured</a></li>
+            <li class="pb-2"><a href="">Trending</a></li>
+            <li class="pb-2"><a href="">Shop Classics</a></li>
+            <li class="pb-2"><a href="">Shop Classics</a></li>
+            <li class="pb-2"><a href="">Explore</a></li>
+          </ul>
+        </li>
+        <li class="border-b">
+          <div class="flex justify-between">
+            <a
+              href="#"
+              class="py-2 px-4 block text-[#1f2427] transition duration-300 tracking-[1px] text-[22px]"
+              >Men</a
+            >
+            <button
+              onclick="showDropdown(2)"
+              onclick="hideDropDown(-2)"
+              class=""
+            >
+              <img
+                src="../assets/icons/dropdown.png"
+                alt="dropdown"
+                class="size-6 mr-3"
+              />
+            </button>
+          </div>
+          <ul
+            class="pl-10 mt-4 h-0 duration-500 overflow-hidden"
+            id="men-drop"
+          >
+            <li class="pb-2"><a href="">Men</a></li>
+            <li class="pb-2"><a href="">New Arrivals</a></li>
+            <li class="pb-2"><a href="">Mother's Day Shop </a></li>
+            <li class="pb-2"><a href="">Featured</a></li>
+            <li class="pb-2"><a href="">Collections</a></li>
+            <li class="pb-2"><a href="">Shoes</a></li>
+            <li class="pb-2"><a href="">Clothing</a></li>
+            <li class="pb-2"><a href="">Accessories</a></li>
+            <li class="pb-2"><a href="">Shop by Sport</a></li>
+          </ul>
+        </li>
+        <li class="border-b">
+          <div class="flex justify-between">
+            <a
+              href="#"
+              class="py-2 px-4 block text-[#1f2427] transition duration-300 tracking-[1px] text-[22px]"
+              >Women</a
+            >
+            <button
+              onclick="showDropdown(3)"
+              onclick="hideDropDown(-3)"
+              class=""
+            >
+              <img
+                src="../assets/icons/dropdown.png"
+                alt="dropdown"
+                class="size-6 mr-3"
+              />
+            </button>
+          </div>
+          <ul
+            class="pl-10 mt-4 h-0 duration-500 overflow-hidden"
+            id="women-drop"
+          >
+            <li class="pb-2"><a href="">Women</a></li>
+            <li class="pb-2"><a href="">New Arrivals</a></li>
+            <li class="pb-2"><a href="">Mother's Day Shop </a></li>
+            <li class="pb-2"><a href="">Featured</a></li>
+            <li class="pb-2"><a href="">Collections</a></li>
+            <li class="pb-2"><a href="">Shoes</a></li>
+            <li class="pb-2"><a href="">Clothing</a></li>
+            <li class="pb-2"><a href="">Accessories</a></li>
+            <li class="pb-2"><a href="">Shop by Sport</a></li>
+          </ul>
+        </li>
+        <li class="border-b">
+          <div class="flex justify-between">
+            <a
+              href="#"
+              class="py-2 px-4 block text-[#1f2427] transition duration-300 tracking-[1px] text-[22px]"
+              >Kids</a
+            >
+            <button
+              onclick="showDropdown(4)"
+              onclick="hideDropDown(-4)"
+              class=""
+            >
+              <img
+                src="../assets/icons/dropdown.png"
+                alt="dropdown"
+                class="size-6 mr-3"
+              />
+            </button>
+          </div>
+          <ul
+            class="pl-10 mt-4 h-0 duration-500 overflow-hidden"
+            id="kids-drop"
+          >
+            <li class="pb-2"><a href="">Kids</a></li>
+            <li class="pb-2"><a href="">New Arrivals</a></li>
+            <li class="pb-2"><a href="">Mother's Day Shop </a></li>
+            <li class="pb-2"><a href="">Featured</a></li>
+            <li class="pb-2"><a href="">Collections</a></li>
+            <li class="pb-2"><a href="">Shop by Age</a></li>
+            <li class="pb-2"><a href="">Shoes</a></li>
+            <li class="pb-2"><a href="">Clothing</a></li>
+            <li class="pb-2"><a href="">Accessories</a></li>
+            <li class="pb-2"><a href="">Shop by Sport</a></li>
+          </ul>
+        </li>
+        <li class="border-b">
+          <div class="flex justify-between">
+            <a
+              href="#"
+              class="py-2 px-4 block text-[#1f2427] transition duration-300 tracking-[1px] text-[22px]"
+              >Sales</a
+            >
+            <button
+              onclick="showDropdown(5)"
+              onclick="hideDropDown(-5)"
+              class=""
+            >
+              <img
+                src="../assets/icons/dropdown.png"
+                alt="dropdown"
+                class="size-6 mr-3"
+              />
+            </button>
+          </div>
+          <ul
+            class="pl-10 mt-4 h-0 duration-500 overflow-hidden"
+            id="sales-drop"
+          >
+            <li class="pb-2"><a href="">Shops</a></li>
+            <li class="pb-2"><a href="">Extra 25% Off Select Styles</a></li>
+            <li class="pb-2"><a href="">All Sale</a></li>
+            <li class="pb-2"><a href="">Sale Shoes</a></li>
+            <li class="pb-2"><a href="">Sale Clothing</a></li>
+            <li class="pb-2"><a href="">Sale Accessories & Equipment</a></li>
+            <li class="pb-2"><a href="">Sale Mens</a></li>
+            <li class="pb-2"><a href="">Sale Womens</a></li>
+            <li class="pb-2"><a href="">Sale Kids</a></li>
+          </ul>
+        </li>
+        <li class="border-b">
+          <div class="flex justify-between">
+            <a
+              href="#"
+              class="py-2 px-4 block text-[#1f2427] transition duration-300 tracking-[1px] text-[22px]"
+              >Jordan</a
+            >
+            <button
+              onclick="showDropdown(6)"
+              onclick="hideDropDown(-6)"
+              class=""
+            >
+              <img
+                src="../assets/icons/dropdown.png"
+                alt="dropdown"
+                class="size-6 mr-3"
+              />
+            </button>
+          </div>
+          <ul
+            class="pl-10 mt-4 h-0 duration-500 overflow-hidden"
+            id="jordan-drop"
+          >
+            <li class="pb-2"><a href="">Shops</a></li>
+            <li class="pb-2"><a href="">Extra 25% Off Select Styles</a></li>
+            <li class="pb-2"><a href="">New Arrivals</a></li>
+            <li class="pb-2"><a href="">Mother's Day Shop </a></li>
+            <li class="pb-2"><a href="">Featured</a></li>
+            <li class="pb-2"><a href="">Collections</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Jordan -->
+      <div class="flex mt-4 ml-8 items-center gap-4">
+        <img src="../assets/icons/jordan-icons.webp" alt="" class="size-[30px]">
+        <p>Jordan</p>
+      </div>
+      <!-- Converse -->
+      <div class="flex mt-4 ml-8 items-center gap-4">
+        <img src="../assets/icons/converse-logo.svg" alt="" class="size-[30px]">
+        <p>Converse</p>
+      </div>
+      <p class="text-wrap pl-10 font-sans font-normal text-xl py-5 text-neutral-500">
+        Become a Nike Member for the best products, inspiration and stories in sport. <span class="text-black font-medium">Learn More</span>
+      </p>
+      <!-- Sign in buttons -->
+      <button class="ml-10 bg-black text-white py-2 px-5 rounded-3xl">Join Us</button>
+      <button class="ml-2 bg-white border-solid border-[1px] border-neutral-400 text-black py-2 px-5 rounded-3xl">Sign In</button>
+
+      <!-- bag shopping-->
+      <div class="flex mt-4 ml-8 items-center gap-4">
+        <img src="../assets/icons/shopping-bag.png" alt="" class="size-[25px]">
+        <p>Bag</p>
+      </div>
+      <!-- order -->
+      <div class="flex mt-4 ml-8 items-center gap-4">
+        <svg aria-hidden="true" class="pre-nav-design-icon" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M14.25 3.75C13.01 3.75 12 4.76 12 6.5v7m8.25-3.75H3.75"></path>
+        <path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M14.25 3.75h4.39l1.61 6v10.5H3.75V9.75l1.61-6h5.14">
+
+        </path></svg>
+        <p>Orders</p>
+      </div>
+      <!-- store -->
+      <div class="flex mt-4 ml-8 items-center gap-4">
+        <svg aria-hidden="true" class="pre-nav-design-icon" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
+        <path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M20.25 5.25V16.5c0 1.24-1.01 2.25-2.25 2.25H6c-1.24 0-2.25-1.01-2.25-2.25V5.25"></path>
+        <path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M8.25 18.5v-7.25h7.5v7.25M12 11.25v7.25M1.5 5.25h21">
+        </path></svg>
+        <p>Find a store</p>
+      </div>
+      <!-- help -->
+      <div class="flex mt-4 ml-8 items-center gap-4">
+        <svg aria-hidden="true" class="pre-nav-design-icon" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M12 21.75c5.385 0 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25 2.25 6.615 2.25 12s4.365 9.75 9.75 9.75zM11.99 18v-1.5">
+        </path><path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M9 9.75a3 3 0 114.29 2.71c-.78.37-1.29 1.16-1.29 2.03V15">
+        </path></svg>
+        <p>Help</p>
+      </div>
+    </div>
+    <!-- Main Section -->
+    <div >
+        <div class="max-w-[1600px] mx-auto">
+            <div class="font-sans text-black md:flex flex-1 justify-between mx-5">
+                <p class="md:border-none md:my-0 mb-10 md:text-2xl text-xl font-medium">New releases<span class="md:visible hidden">(168)</span></p>
+                <div class="lg:flex flex-1 w-[300px] hidden">
+                    <button class="flex flex-1 gap-3 w-full justify-end mr-4">
+                        <p>Hide Filters</p>
+                        <svg aria-hidden="true" class="icon-filter-ds" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M21 8.25H10m-5.25 0H3"></path><path stroke="currentColor" stroke-width="1.5" d="M7.5 6v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path><path stroke="currentColor" stroke-width="1.5" d="M3 15.75h10.75m5 0H21"></path><path stroke="currentColor" stroke-width="1.5" d="M16.5 13.5v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <details>
+                        <summary>Sort By</summary>
+                        <ul>
+                            <li>Featured</li>
+                            <li>Newest</li>
+                            <li>Price: High-Low</li>
+                            <li>Price: Low-High</li>
+                        </ul>
+                    </details>
+                </div>
+                <div class="md:hidden flex flex-1 max-sm:gap-5 text-[16px] items-baseline font-medium pb-3 border-b-[1px] gap-3">
+                    <a href="">Shoes</a>
+                    <a href="">Top & T-shirt</a>
+                    <a href="">Shorts</a>
+                    <a href="">Hoodies & Pullovers</a>
+                    <a href="">Jackets & Vests</a>
+                    <a href="" class="max-sm:hidden block">Pants & Tights</a>
+                    <a href="" class="max-sm::hidden block">Swimming</a>
+                </div>
+                <div class="md:hidden flex justify-between items-center my-5 border-b-[1px] pb-5">
+                    <p>Pick Up Today</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="md:hidden flex justify-between items-center gap-3">
+                    <p>369 results</p>
+                    <button class="flex py-1 px-4 rounded-[26px] gap-1 w-fit justify-end mr-4 border-gray-500 border-[1px] border-opacity-90">
+                        <p>Filter</p>
+                        <svg aria-hidden="true" class="icon-filter-ds" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M21 8.25H10m-5.25 0H3"></path><path stroke="currentColor" stroke-width="1.5" d="M7.5 6v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path><path stroke="currentColor" stroke-width="1.5" d="M3 15.75h10.75m5 0H21"></path><path stroke="currentColor" stroke-width="1.5" d="M16.5 13.5v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex w-full mx-5 overflow-x-hidden flex-1">
+                <!-- Sticky Bar -->
+                <div class="bg-pink-400 h-screen sticky overflow-y-hidden">
+                    <div class="flex justify-between items-center my-5 border-b-[1px] pb-5">
+                        <p>Pick Up Today</p>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <ul class="pr-10 border-b-[1px] pb-12 flex-col flex gap-3 font-sans font-medium ">
+                        <li><a href="">Shoes</a></li>
+                        <li><a href="">Tops & T-shirts</a></li>
+                        <li><a href="">Shorts</a></li>
+                        <li><a href="">Hoodies & Pullovers</a></li>
+                        <li><a href="">Jackets & Vests</a></li>
+                        <li><a href="">Pants & Tights</a></li>
+                        <li><a href="">Swimming</a></li>
+                        <li><a href="">Socks</a></li>
+                        <li><a href="">Accessories & <br> Equipment</a></li>
+                    </ul>
+                    
+                    <div class="my-3">
+                        <div class="flex justify-between items-center">
+                            <p>Sale & Offers</p>
+                            <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"  onclick="stickyDropDown(1)" onclick="noStickyDropDown(-1)">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+                            </svg>
+                              
+                        </div>
+                        <form action="" class="font-sans text-xl mt-3 h-[0] overflow-hidden duration-300 " id="sales">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label><br>
+                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for="vehicle3"> I have a boat</label><br>
+                        </form>
+                    </div>
+
+                    <div class="my-3">
+                        Sale & Offers
+                        <form action="" class="font-sans text-xl mt-3">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label><br>
+                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for="vehicle3"> I have a boat</label><br>
+                        </form>
+                    </div>
+
+                    <div class="my-3">
+                        Sale & Offers
+                        <form action="" class="font-sans text-xl mt-3">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label><br>
+                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for="vehicle3"> I have a boat</label><br>
+                        </form>
+                    </div>
+
+                    <div class="my-3">
+                        Sale & Offers
+                        <form action="" class="font-sans text-xl mt-3">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label><br>
+                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for="vehicle3"> I have a boat</label><br>
+                        </form>
+                    </div>
+
+                    <div class="my-3">
+                        Sale & Offers
+                        <form action="" class="font-sans text-xl mt-3">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label><br>
+                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for="vehicle3"> I have a boat</label><br>
+                        </form>
+                    </div>
+
+                    <div class="my-3">
+                        Sale & Offers
+                        <form action="" class="font-sans text-xl mt-3">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label><br>
+                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                            <label for="vehicle3"> I have a boat</label><br>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="bg-blue-500 h-screen">blue</div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/feature.js"></script>
 </body>
 </html>

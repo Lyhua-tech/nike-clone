@@ -9,7 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
-  <body class="overflow-y-hidden md:overflow-y-scroll">
+  <body class="">
     <nav class="lg:bg-[#f5f5f5] lg:py-2 hidden md:block">
       <div
         class="justify-between max-w-[1600px] mx-auto items-center lg:flex gap-10 hidden md:flex-1"
@@ -563,11 +563,10 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
           </svg>          
-          <div class="block cursor-pointer md:hidden pb-1 " onclick="openNav()">
-            <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
-            <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
-            <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
-          </div>
+          <svg aria-hidden="true" class="pre-nav-design-icon" focusable="false"
+            viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path 
+            stroke="currentColor" stroke-width="1.5" d="M21 5.25H3M21 12H3m18 6.75H3" onclick="closeNav()"></path>
+          </svg>
         </div>
       </div>
     </nav>
@@ -919,7 +918,7 @@
             </button>
           </div>
         </div>
-        <div class="flex overflow-x-auto space-x-5">
+        <div class="flex overflow-x-hidden space-x-5">
           <img src="./shoes/dunk.jpeg" alt="" class="mySlides" />
           <img src="./shoes/blazer.jpeg" alt="" class="mySlides" />
           <img src="./shoes/air-max.png" alt="" class="mySlides" />
@@ -986,17 +985,18 @@
         </div>
       </div>
     </div>
-    <!-- Upper Footer section -->
+    <!--Footer section -->
     <div class="relative">
       <div
-        class="max-w-[1200px] mx-auto flex items-center h-[410px] justify-between text-neutral-950 relative top-[94px]"
+        class="max-w-[1200px] mx-auto flex items-center h-[300px] justify-between relative top-[94px] duration-300 text-[#707072]"
+        id="upperfooter"
       >
         <ul
           onmouseenter="hoverShow()"
           onmouseleave="hoverhide()"
-          class="flex flex-col gap-2"
+          class="flex flex-col gap-2 ml-5"
         >
-          <li class="font-sans text-[16px] pb-2 tracking-[1px]">Featured</li>
+          <li class="font-sans text-[16px] pb-2 tracking-[1px] text-black">Featured</li>
           <li class="font-sans text-[16px] tracking-[1px]">Air Force 1</li>
           <li class="font-sans text-[16px] tracking-[1px]">Jordan 1</li>
           <li class="font-sans text-[16px] tracking-[1px]">Metcon</li>
@@ -1011,7 +1011,7 @@
           onmouseleave="hoverhide()"
           class="flex flex-col gap-2 h-[288px]"
         >
-          <li class="font-sans text-[16px] pb-2 tracking-[1px]">Shoes</li>
+          <li class="font-sans text-[16px] pb-2 tracking-[1px] text-black">Shoes</li>
           <li class="font-sans text-[16px] tracking-[1px]">All Shoes</li>
           <li class="font-sans text-[16px] tracking-[1px]">Jordan Shoes</li>
           <li class="font-sans text-[16px] tracking-[1px]">Running Shoes</li>
@@ -1027,7 +1027,7 @@
           onmouseleave="hoverhide()"
           class="flex flex-col gap-2 h-[288px]"
         >
-          <li class="font-sans text-[16px] pb-2 tracking-[1px]">Clothing</li>
+          <li class="font-sans text-[16px] pb-2 tracking-[1px] text-black">Clothing</li>
           <li class="font-sans text-[16px] tracking-[1px]">All Clothing</li>
           <li class="font-sans text-[16px] tracking-[1px]">Tops & T-Shirts</li>
           <li class="font-sans text-[16px] tracking-[1px]">Shorts</li>
@@ -1049,9 +1049,9 @@
         <ul
           onmouseenter="hoverShow()"
           onmouseleave="hoverhide()"
-          class="flex flex-col gap-2"
+          class="flex flex-col gap-2 mr-5 pt-6"
         >
-          <li class="font-sans text-[16px] pb-2 tracking-[1px]">Kids</li>
+          <li class="font-sans text-[16px] pb-2 tracking-[1px] text-black">Kids</li>
           <li class="font-sans text-[16px] tracking-[1px]">
             Infant & Toddler Shoes
           </li>
@@ -1074,13 +1074,13 @@
         id="white-block"
       ></div>
       <footer
-        class="bg-neutral-950 text-white font-sans text-sm h-[400px] relative w-full"
+        class="bg-neutral-950 text-white font-sans text-sm h-[500px] relative w-full"
         id="footer-sec"
       >
         <div
-          class="max-w-[1800px] mx-auto flex items-center h-full justify-between"
+          class="max-w-[1800px] mx-auto flex items-center h-full justify-between gap-2 text-[12px]"
         >
-          <ul class="ml-[150px] flex flex-1 flex-col gap-[20px]">
+          <ul class="ml-[15px] max-w-[1600px] mx-auto flex mb-4 justify-start flex-col gap-[20px]">
             <li><a href="">RESOURCES</a></li>
             <li><a href="">GIFT CARDS</a></li>
             <li><a href="">FIND A STORE</a></li>
@@ -1089,34 +1089,36 @@
             <li><a href="">NIKE JOURNAL</a></li>
             <li><a href="">Site Feedback</a></li>
           </ul>
-          <ul class="flex flex-1 flex-col gap-[20px]">
-            <li><a href="">RESOURCES</a></li>
-            <li><a href="">GIFT CARDS</a></li>
-            <li><a href="">FIND A STORE</a></li>
-            <li><a href="">BECOME A MEMBER</a></li>
-            <li><a href="">NIKE X NBA</a></li>
-            <li><a href="">NIKE JOURNAL</a></li>
-            <li><a href="">Site Feedback</a></li>
+          <ul class=" max-w-[1600px] mx-auto flex mt-16 justify-start flex-col gap-[20px]">
+            <li><a href="">HELP</a></li>
+            <li><a href="">Get Help</a></li>
+            <li><a href="">Order Status</a></li>
+            <li><a href="">Shipping and Delivery</a></li>
+            <li><a href="">Returns</a></li>
+            <li><a href="">Order Cancellation</a></li>
+            <li><a href="">Payment Options</a></li>
+            <li><a href="">Gift Card Balance</a></li>
+            <li><a href="">Contact Us</a></li>
           </ul>
-          <ul class="flex flex-1 flex-col gap-[20px]">
-            <li><a href="">RESOURCES</a></li>
-            <li><a href="">GIFT CARDS</a></li>
-            <li><a href="">FIND A STORE</a></li>
-            <li><a href="">BECOME A MEMBER</a></li>
-            <li><a href="">NIKE X NBA</a></li>
-            <li><a href="">NIKE JOURNAL</a></li>
-            <li><a href="">Site Feedback</a></li>
+          <ul class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col gap-[20px]">
+            <li><a href="">COMPANY</a></li>
+            <li><a href="">About Nike</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Investors</a></li>
+            <li><a href="">Purpose</a></li>
+            <li><a href="">Sustainability</a></li>
           </ul>
-          <ul class="flex flex-1 flex-col gap-[20px]">
-            <li><a href="">RESOURCES</a></li>
-            <li><a href="">GIFT CARDS</a></li>
-            <li><a href="">FIND A STORE</a></li>
-            <li><a href="">BECOME A MEMBER</a></li>
-            <li><a href="">NIKE X NBA</a></li>
-            <li><a href="">NIKE JOURNAL</a></li>
-            <li><a href="">Site Feedback</a></li>
+          <ul class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col gap-[20px]">
+            <li><a href="">PROMOTIONS & DISCOUNTS</a></li>
+            <li><a href="">Student</a></li>
+            <li><a href="">Military</a></li>
+            <li><a href="">Teacher</a></li>
+            <li><a href="">First Responders & Medical </a></li>
+            <li><a href="">Professionals</a></li>
+            <li><a href="">Birthday</a></li>
           </ul>
-          <div class="flex w-10 mr-[150px] gap-2 pb-48">
+          <div class="flex w-10 mr-[150px] gap-2 pb-48 items-start h-[270px]">
             <img src="icons\facebook-icon.svg" alt="" class="size-[30px]" />
             <img src="icons\facebook-icon.svg" alt="" class="size-[30px]" />
             <img src="icons\facebook-icon.svg" alt="" class="size-[30px]" />
