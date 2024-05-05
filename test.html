@@ -904,89 +904,32 @@
                     </ul>
                     
                     <div class="my-3">
-                        <div class="flex justify-between items-center">
-                            <p>Sale & Offers</p>
-                            <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"  onclick="stickyDropDown(1)" onclick="noStickyDropDown(-1)">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
-                            </svg>
-                              
-                        </div>
-                        <form action="" class="font-sans text-xl mt-3 h-[0] overflow-hidden duration-300 " id="sales">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                            <label for="vehicle2"> I have a car</label><br>
-                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                            <label for="vehicle3"> I have a boat</label><br>
-                        </form>
-                    </div>
+                      <div class="flex justify-between items-center" onclick="toggleDropdown()">
+                          <p>Sale & Offers</p>
+                          <svg class="w-6 h-6 text-black cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+                          </svg>   
+                      </div>
+                      <form action="" class="font-sans text-xl mt-3 overflow-hidden duration-300 h-0" id="sales-tog">
+                          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                          <label for="vehicle1">Mother's Day Sale: <br> Extra 25% Off</label><br>
+                          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                          <label for="vehicle2"> I have a car</label><br>
+                          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                          <label for="vehicle3"> I have a boat</label><br>
+                      </form>
+                  </div>
+                  
 
-                    <div class="my-3">
-                        Sale & Offers
-                        <form action="" class="font-sans text-xl mt-3">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                            <label for="vehicle2"> I have a car</label><br>
-                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                            <label for="vehicle3"> I have a boat</label><br>
-                        </form>
-                    </div>
-
-                    <div class="my-3">
-                        Sale & Offers
-                        <form action="" class="font-sans text-xl mt-3">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                            <label for="vehicle2"> I have a car</label><br>
-                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                            <label for="vehicle3"> I have a boat</label><br>
-                        </form>
-                    </div>
-
-                    <div class="my-3">
-                        Sale & Offers
-                        <form action="" class="font-sans text-xl mt-3">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                            <label for="vehicle2"> I have a car</label><br>
-                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                            <label for="vehicle3"> I have a boat</label><br>
-                        </form>
-                    </div>
-
-                    <div class="my-3">
-                        Sale & Offers
-                        <form action="" class="font-sans text-xl mt-3">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                            <label for="vehicle2"> I have a car</label><br>
-                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                            <label for="vehicle3"> I have a boat</label><br>
-                        </form>
-                    </div>
-
-                    <div class="my-3">
-                        Sale & Offers
-                        <form action="" class="font-sans text-xl mt-3">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                            <label for="vehicle1" class="">Mother's Day Sale: <br> Extra 25% Off</label><br>
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                            <label for="vehicle2"> I have a car</label><br>
-                            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                            <label for="vehicle3"> I have a boat</label><br>
-                        </form>
-                    </div>
+                    
                 </div>
 
                 <div class="bg-blue-500 h-screen">blue</div>
             </div>
         </div>
     </div>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/feature.js"></script>
+    <!-- <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/feature.js"></script> -->
+    <script src="index.js"></script>
 </body>
 </html>

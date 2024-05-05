@@ -65,3 +65,7 @@ function hoverHide(x){
   }
 }
 
+function toggleDropdown() {
+  var form = document.getElementById("sales-tog");
+  form.classList.toggle("h-[200px]");
+}
