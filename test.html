@@ -836,7 +836,6 @@
       </div>
     </div>
     <!-- Main Section -->
-    <div >
         <div class="max-w-[1600px] mx-auto">
             <div class="font-sans text-black md:flex flex-1 justify-between mx-5">
                 <p class="md:border-none md:my-0 mb-10 md:text-2xl text-xl font-medium">New releases<span class="md:visible hidden">(168)</span></p>
@@ -880,54 +879,244 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-[1600px] mx-auto">
-            <div class="flex w-full mx-5 overflow-x-hidden flex-1">
-                <!-- Sticky Bar -->
-                <div class="bg-pink-400 h-screen sticky overflow-y-hidden">
-                    <div class="flex justify-between items-center my-5 border-b-[1px] pb-5">
-                        <p>Pick Up Today</p>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <ul class="pr-10 border-b-[1px] pb-12 flex-col flex gap-3 font-sans font-medium ">
-                        <li><a href="">Shoes</a></li>
-                        <li><a href="">Tops & T-shirts</a></li>
-                        <li><a href="">Shorts</a></li>
-                        <li><a href="">Hoodies & Pullovers</a></li>
-                        <li><a href="">Jackets & Vests</a></li>
-                        <li><a href="">Pants & Tights</a></li>
-                        <li><a href="">Swimming</a></li>
-                        <li><a href="">Socks</a></li>
-                        <li><a href="">Accessories & <br> Equipment</a></li>
-                    </ul>
-                    
-                    <div class="my-3">
-                      <div class="flex justify-between items-center" onclick="toggleDropdown()">
-                          <p>Sale & Offers</p>
-                          <svg class="w-6 h-6 text-black cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
-                          </svg>   
-                      </div>
-                      <form action="" class="font-sans text-xl mt-3 overflow-hidden duration-300 h-0" id="sales-tog">
-                          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                          <label for="vehicle1">Mother's Day Sale: <br> Extra 25% Off</label><br>
-                          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                          <label for="vehicle2"> I have a car</label><br>
-                          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                          <label for="vehicle3"> I have a boat</label><br>
-                      </form>
-                  </div>
-                  
-
-                    
+      <div class="max-w-[1600px] mx-auto flex">
+          <!-- Sticky Vertical Bar -->
+          <div class="sticky top-0 h-screen bg-pink-400 md:flex flex-col justify-between py-8 px-4 hidden">
+              <div class="flex justify-between items-center my-5 border-b-[1px] pb-5">
+                  <p>Pick Up Today</p>
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                  </label>
+              </div>
+              <ul class="pr-10 border-b-[1px] pb-12 flex-col flex gap-3 font-sans font-medium ">
+                  <li><a href="">Shoes</a></li>
+                  <li><a href="">Tops & T-shirts</a></li>
+                  <li><a href="">Shorts</a></li>
+                  <li><a href="">Hoodies & Pullovers</a></li>
+                  <li><a href="">Jackets & Vests</a></li>
+                  <li><a href="">Pants & Tights</a></li>
+                  <li><a href="">Swimming</a></li>
+                  <li><a href="">Socks</a></li>
+                  <li><a href="">Accessories & <br> Equipment</a></li>
+              </ul>
+              
+              <div class="my-3">
+                <div class="flex justify-between items-center" onclick="toggleDropdown()">
+                    <p>Sale & Offers</p>
+                    <svg class="w-6 h-6 text-black cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+                    </svg>   
                 </div>
+                <form action="" class="font-sans text-xl mt-3 overflow-hidden duration-300 h-0" id="sales-tog">
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1">Mother's Day Sale: <br> Extra 25% Off</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> I have a car</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3"> I have a boat</label><br>
+                </form>
+              </div>
+          </div>
+      
+          <!-- Grid Layout -->
+          <div class="flex-1 p-8">
+              <div class="grid lg:grid-cols-3 gap-4 max-md:grid-cols-2 md:gap-3 max-sm:grid-cols-1">
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+                  <div class="p-4">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8628962-8b8e-4676-8ff6-0a0c5f9c0930/zoom-vomero-5-womens-shoes-81TPKW.png" alt="">
+                    <p class="text-center font-sans text-2xl font-medium py-5">Shoes</p>
+                  </div>
+              </div>
+          </div>
+      
+      </div>
 
-                <div class="bg-blue-500 h-screen">blue</div>
-            </div>
+      <!-- Footer -->
+      <div class="relative">
+        <div
+          class="max-w-[1200px] mx-auto flex items-center h-[300px] justify-between relative top-[94px] duration-300 text-[#707072]"
+          id="upperfooter"
+        >
+          <ul
+            onmouseenter="hoverShow()"
+            onmouseleave="hoverhide()"
+            class="flex flex-col gap-2 ml-5"
+          >
+            <li class="font-sans text-[16px] pb-2 tracking-[1px] text-black">Featured</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Air Force 1</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Jordan 1</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Metcon</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Jordan 1</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Air Max 270</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Air Max 97</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Blazer</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Pegasus</li>
+          </ul>
+          <ul
+            onmouseenter="hoverShow()"
+            onmouseleave="hoverhide()"
+            class="flex flex-col gap-2 h-[288px]"
+          >
+            <li class="font-sans text-[16px] pb-2 tracking-[1px] text-black">Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">All Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Jordan Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Running Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Basketball Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Tennis Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Training Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Custom Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Sale Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Soccer Cleats</li>
+          </ul>
+          <ul
+            onmouseenter="hoverShow()"
+            onmouseleave="hoverhide()"
+            class="flex flex-col gap-2 h-[288px]"
+          >
+            <li class="font-sans text-[16px] pb-2 tracking-[1px] text-black">Clothing</li>
+            <li class="font-sans text-[16px] tracking-[1px]">All Clothing</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Tops & T-Shirts</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Shorts</li>
+            <li class="font-sans text-[16px] tracking-[1px]">
+              Hoodies & Pullovers
+            </li>
+            <li class="font-sans text-[16px] tracking-[1px]">
+              Joggers & Sweatpants
+            </li>
+            <li class="font-sans text-[16px] tracking-[1px]">Sports Bras</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Pants & Tights</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Socks</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Yoga</li>
+            <li class="font-sans text-[16px] tracking-[1px]">NikeLab</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Plus Size</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Big & Tall</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Sale Clothing</li>
+          </ul>
+          <ul
+            onmouseenter="hoverShow()"
+            onmouseleave="hoverhide()"
+            class="flex flex-col gap-2 mr-5 pt-6"
+          >
+            <li class="font-sans text-[16px] pb-2 tracking-[1px] text-black">Kids</li>
+            <li class="font-sans text-[16px] tracking-[1px]">
+              Infant & Toddler Shoes
+            </li>
+            <li class="font-sans text-[16px] tracking-[1px]">Kids Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">
+              Kid Basketball Shoes
+            </li>
+            <li class="font-sans text-[16px] tracking-[1px]">
+              Kid Running Shoes
+            </li>
+            <li class="font-sans text-[16px] tracking-[1px]">Kid Jordan Shoes</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Kids Clothing</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Kids Backpacks</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Kids Socks</li>
+            <li class="font-sans text-[16px] tracking-[1px]">Kids Sale</li>
+          </ul>
         </div>
-    </div>
+        <div
+          class="bg-white max-w-[1200px] mx-auto flex h-[100px] my-0 relative z-20"
+          id="white-block"
+        ></div>
+        <footer
+          class="bg-neutral-950 text-white font-sans text-sm h-[500px] relative w-full"
+          id="footer-sec"
+        >
+          <div
+            class="max-w-[1800px] mx-auto flex items-center h-full justify-between gap-2 text-[12px]"
+          >
+            <ul class="ml-[15px] max-w-[1600px] mx-auto flex mb-4 justify-start flex-col gap-[20px]">
+              <li><a href="">RESOURCES</a></li>
+              <li><a href="">GIFT CARDS</a></li>
+              <li><a href="">FIND A STORE</a></li>
+              <li><a href="">BECOME A MEMBER</a></li>
+              <li><a href="">NIKE X NBA</a></li>
+              <li><a href="">NIKE JOURNAL</a></li>
+              <li><a href="">Site Feedback</a></li>
+            </ul>
+            <ul class=" max-w-[1600px] mx-auto flex mt-16 justify-start flex-col gap-[20px]">
+              <li><a href="">HELP</a></li>
+              <li><a href="">Get Help</a></li>
+              <li><a href="">Order Status</a></li>
+              <li><a href="">Shipping and Delivery</a></li>
+              <li><a href="">Returns</a></li>
+              <li><a href="">Order Cancellation</a></li>
+              <li><a href="">Payment Options</a></li>
+              <li><a href="">Gift Card Balance</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+            <ul class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col gap-[20px]">
+              <li><a href="">COMPANY</a></li>
+              <li><a href="">About Nike</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Investors</a></li>
+              <li><a href="">Purpose</a></li>
+              <li><a href="">Sustainability</a></li>
+            </ul>
+            <ul class="max-w-[1600px] mx-auto flex mb-4 justify-start flex-col gap-[20px]">
+              <li><a href="">PROMOTIONS & DISCOUNTS</a></li>
+              <li><a href="">Student</a></li>
+              <li><a href="">Military</a></li>
+              <li><a href="">Teacher</a></li>
+              <li><a href="">First Responders & Medical </a></li>
+              <li><a href="">Professionals</a></li>
+              <li><a href="">Birthday</a></li>
+            </ul>
+            <div class="flex w-10 mr-[150px] gap-2 pb-48 items-start h-[270px]">
+              <img src="icons\facebook-icon.svg" alt="" class="size-[30px]" />
+              <img src="icons\facebook-icon.svg" alt="" class="size-[30px]" />
+              <img src="icons\facebook-icon.svg" alt="" class="size-[30px]" />
+              <img src="icons\facebook-icon.svg" alt="" class="size-[30px]" />
+            </div>
+          </div>
+        </footer>
+      </div>
     <!-- <script src="../assets/js/index.js"></script>
     <script src="../assets/js/feature.js"></script> -->
     <script src="index.js"></script>

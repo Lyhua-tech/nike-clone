@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Vertical Bar Layout</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<div class="max-w-[1600px] mx-auto flex">
+    <!-- Sticky Vertical Bar -->
+    <div class="sticky top-0 h-screen bg-pink-400 flex flex-col justify-between py-8 px-4">
+        <div class="flex justify-between items-center my-5 border-b-[1px] pb-5">
+            <p>Pick Up Today</p>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <ul class="pr-10 border-b-[1px] pb-12 flex-col flex gap-3 font-sans font-medium ">
+            <li><a href="">Shoes</a></li>
+            <li><a href="">Tops & T-shirts</a></li>
+            <li><a href="">Shorts</a></li>
+            <li><a href="">Hoodies & Pullovers</a></li>
+            <li><a href="">Jackets & Vests</a></li>
+            <li><a href="">Pants & Tights</a></li>
+            <li><a href="">Swimming</a></li>
+            <li><a href="">Socks</a></li>
+            <li><a href="">Accessories & <br> Equipment</a></li>
+        </ul>
+        
+        <div class="my-3">
+          <div class="flex justify-between items-center" onclick="toggleDropdown()">
+              <p>Sale & Offers</p>
+              <svg class="w-6 h-6 text-black cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+              </svg>   
+          </div>
+          <form action="" class="font-sans text-xl mt-3 overflow-hidden duration-300 h-0" id="sales-tog">
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="vehicle1">Mother's Day Sale: <br> Extra 25% Off</label><br>
+              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+              <label for="vehicle2"> I have a car</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label for="vehicle3"> I have a boat</label><br>
+          </form>
+        </div>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="flex-1 p-8">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-blue-200 p-4">1</div>
+            <div class="bg-blue-200 p-4">2</div>
+            <div class="bg-blue-200 p-4">3</div>
+            <div class="bg-blue-200 p-4">4</div>
+            <div class="bg-blue-200 p-4">5</div>
+            <div class="bg-blue-200 p-4">6</div>
+            <div class="bg-blue-200 p-4">7</div>
+            <div class="bg-blue-200 p-4">8</div>
+            <div class="bg-blue-200 p-4">9</div>
+            <div class="bg-blue-200 p-4">1</div>
+            <div class="bg-blue-200 p-4">2</div>
+            <div class="bg-blue-200 p-4">3</div>
+            <div class="bg-blue-200 p-4">4</div>
+            <div class="bg-blue-200 p-4">5</div>
+            <div class="bg-blue-200 p-4">6</div>
+            <div class="bg-blue-200 p-4">7</div>
+            <div class="bg-blue-200 p-4">8</div>
+            <div class="bg-blue-200 p-4">9</div>
+            <div class="bg-blue-200 p-4">1</div>
+            <div class="bg-blue-200 p-4">2</div>
+            <div class="bg-blue-200 p-4">3</div>
+            <div class="bg-blue-200 p-4">4</div>
+            <div class="bg-blue-200 p-4">5</div>
+            <div class="bg-blue-200 p-4">6</div>
+            <div class="bg-blue-200 p-4">7</div>
+            <div class="bg-blue-200 p-4">8</div>
+            <div class="bg-blue-200 p-4">9</div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Include Font Awesome for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
