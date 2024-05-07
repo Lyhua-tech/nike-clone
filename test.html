@@ -840,7 +840,7 @@
             <div class="font-sans text-black md:flex flex-1 justify-between mx-5">
                 <p class="md:border-none md:my-0 mb-10 md:text-2xl text-xl font-medium">New releases<span class="md:visible hidden">(168)</span></p>
                 <div class="lg:flex flex-1 w-[300px] hidden">
-                    <button class="flex flex-1 gap-3 w-full justify-end mr-4">
+                    <button class="flex flex-1 gap-3 w-full justify-end mr-4" onclick="hideBar()">
                         <p>Hide Filters</p>
                         <svg aria-hidden="true" class="icon-filter-ds" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M21 8.25H10m-5.25 0H3"></path><path stroke="currentColor" stroke-width="1.5" d="M7.5 6v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path><path stroke="currentColor" stroke-width="1.5" d="M3 15.75h10.75m5 0H21"></path><path stroke="currentColor" stroke-width="1.5" d="M16.5 13.5v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"></path></svg>
                     </button>
@@ -881,7 +881,7 @@
         </div>
       <div class="max-w-[1600px] mx-auto flex">
           <!-- Sticky Vertical Bar -->
-          <div class="sticky top-0 h-screen bg-pink-400 md:flex flex-col justify-between py-8 px-4 hidden">
+          <div class="sticky top-0 h-screen bg-pink-400 md:flex flex-col justify-between py-8 px-4 hidden duration-300 max-w-[220px]" id="sticky-ver">
               <div class="flex justify-between items-center my-5 border-b-[1px] pb-5">
                   <p>Pick Up Today</p>
                   <label class="switch">

@@ -69,3 +69,8 @@ function toggleDropdown() {
   var form = document.getElementById("sales-tog");
   form.classList.toggle("h-[200px]");
 }
+
+  function hideBar() {
+    document.querySelector('.sticky-ver').classList.toggle('max-w-0');
+  }
+

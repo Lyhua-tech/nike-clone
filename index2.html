@@ -9,9 +9,7 @@
 </head>
 <body class="bg-gray-100">
 
-<div class="max-w-[1600px] mx-auto flex">
-    <!-- Sticky Vertical Bar -->
-    <div class="sticky top-0 h-screen bg-pink-400 flex flex-col justify-between py-8 px-4">
+    <div class="sticky top-0 h-screen bg-pink-400 md:flex flex-col justify-between py-8 px-4 hidden duration-300 w-[220px]" id="sticky-ver">
         <div class="flex justify-between items-center my-5 border-b-[1px] pb-5">
             <p>Pick Up Today</p>
             <label class="switch">
@@ -32,58 +30,31 @@
         </ul>
         
         <div class="my-3">
-          <div class="flex justify-between items-center" onclick="toggleDropdown()">
-              <p>Sale & Offers</p>
-              <svg class="w-6 h-6 text-black cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
-              </svg>   
-          </div>
-          <form action="" class="font-sans text-xl mt-3 overflow-hidden duration-300 h-0" id="sales-tog">
-              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-              <label for="vehicle1">Mother's Day Sale: <br> Extra 25% Off</label><br>
-              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-              <label for="vehicle2"> I have a car</label><br>
-              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-              <label for="vehicle3"> I have a boat</label><br>
-          </form>
+            <div class="flex justify-between items-center" onclick="toggleDropdown()">
+                <p>Sale & Offers</p>
+                <svg class="w-6 h-6 text-black cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+                </svg>   
+            </div>
+            <form action="" class="font-sans text-xl mt-3 overflow-hidden duration-300 h-0" id="sales-tog">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1">Mother's Day Sale: <br> Extra 25% Off</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> I have a boat</label><br>
+            </form>
         </div>
     </div>
-
-    <!-- Grid Layout -->
-    <div class="flex-1 p-8">
-        <div class="grid grid-cols-3 gap-4">
-            <div class="bg-blue-200 p-4">1</div>
-            <div class="bg-blue-200 p-4">2</div>
-            <div class="bg-blue-200 p-4">3</div>
-            <div class="bg-blue-200 p-4">4</div>
-            <div class="bg-blue-200 p-4">5</div>
-            <div class="bg-blue-200 p-4">6</div>
-            <div class="bg-blue-200 p-4">7</div>
-            <div class="bg-blue-200 p-4">8</div>
-            <div class="bg-blue-200 p-4">9</div>
-            <div class="bg-blue-200 p-4">1</div>
-            <div class="bg-blue-200 p-4">2</div>
-            <div class="bg-blue-200 p-4">3</div>
-            <div class="bg-blue-200 p-4">4</div>
-            <div class="bg-blue-200 p-4">5</div>
-            <div class="bg-blue-200 p-4">6</div>
-            <div class="bg-blue-200 p-4">7</div>
-            <div class="bg-blue-200 p-4">8</div>
-            <div class="bg-blue-200 p-4">9</div>
-            <div class="bg-blue-200 p-4">1</div>
-            <div class="bg-blue-200 p-4">2</div>
-            <div class="bg-blue-200 p-4">3</div>
-            <div class="bg-blue-200 p-4">4</div>
-            <div class="bg-blue-200 p-4">5</div>
-            <div class="bg-blue-200 p-4">6</div>
-            <div class="bg-blue-200 p-4">7</div>
-            <div class="bg-blue-200 p-4">8</div>
-            <div class="bg-blue-200 p-4">9</div>
-        </div>
-    </div>
-
-</div>
-
+    
+    <button onclick="hideBar()">Toggle Bar</button>
+    
+    <script>
+        function hideBar() {
+            document.getElementById('sticky-ver').classList.toggle('hidden');
+        }
+    </script>
+    
 <!-- Include Font Awesome for social icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
